@@ -1,0 +1,23 @@
+<p>Login form for Angular</p>
+<form [formGroup]="LoginForm" class="form">
+    <h2>LOGIN</h2>
+    <div class="use">
+        <label for="username">Username : </label>
+        <input type="email" id="username" formControlName="usr">
+        <div *ngIf="f.usr.errors">
+            <div *ngIf="f.usr.errors.required && submitted" [ngClass]="{'text-danger':true}" class="color">Email s required</div>
+        </div>
+    </div><br>
+    <div class="word">
+        <label for="password">Password : </label>
+        <input type="password" id="password" formControlName="pwd">
+        <div *ngIf="f.pwd.errors">
+            <div *ngIf="f.pwd.errors.required && submitted" [ngClass]="{'text-danger':true}" class="color">Email s required</div>
+        </div>
+    </div><br>
+    <div class="link">
+        <button (click)="onSubmit()">Login</button>&nbsp;&nbsp;&nbsp;&nbsp;
+        <button button="Register">Register</button>
+    </div>
+</form>
+
