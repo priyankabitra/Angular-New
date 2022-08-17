@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { FormBuilder,FormGroup, Validators } from '@angular/forms';
+import { group } from '@angular/animations';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -18,15 +19,17 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
     this.LoginForm = this.fb.group({
       usr: ['', [Validators.required]],
-      pwd: ['', Validators.required]
+      pwd: ['', Validators.required],
+
     })
    
   }
 
   get f(){return this.LoginForm.controls}
 
+
   onSubmit(){
     console.log(this.LoginForm)
-    this.submitted=true;
-  }
+      this.submitted=true;
+    }
 }

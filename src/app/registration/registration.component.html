@@ -1,35 +1,127 @@
-<p>registration</p>
-<form action="">
-    <div>
-        <label for="FirstName">FirstName</label>
-        <input type="name" id="Firstname">
-    </div>
-    <div>
-        <label for="Lastname">Lastname</label>
-        <input type="text" id="Lastname">
-    </div>
-    <div>
-        <label for="Password">Password</label>
-        <input type="password" id="pwd">
-    </div>
-    <div>
-        <label for="ConfirmPassword">ConfirmPassword</label>
-        <input type="text" id="cnpwd">
-    </div>
-    <div>
-        <label for="DOB">Data Of Birth</label>
-        <input type="text" id="dob">
-    </div>
-    <div>
-        <label for="Mobile Numebr">Mobile Numebr</label>
-        <input type="number" id="phnumber">
-    </div>
-    <div>
-        <label for="Address">Address</label>
-        <input type="text" id="address">
-    </div>
-    <div>
-        <label for="Pin">Pin</label>
-        <input type="text" id="pin">
-    </div>
-</form>
+<div class="container mt-4">
+    <div class="row justify-content-md-center mt-5">
+        <div class="col-sm-8">
+            <div class="card bg-light text-dark p-4 my-5 mx-5 name">
+                <form [formGroup]="RegisterForm">
+                    <h2 class="p-4 text-center mb-4">Registration Form</h2>
+                    <div class="row justify-content-center">
+                        <div class="col-md-6 mb-4">
+                            <div class="form-outline">
+                                <label for="Firstname">Firstname : </label>
+                                <input type="text" class="form-control" id="firstname" placeholder="Enter Firstname" formControlName="ftn" [ngClass]="{'is-invalid' : r.ftn.errors && submitted}">
+                                <div *ngIf="r.ftn.errors && submitted" class="invalid-feedback">
+                                    <div *ngIf="r.ftn.errors.required">Firstname s required</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <div class="form-outline">
+                                <label for="Lastname">Lastname : </label>
+                                <input type="text" class="form-control" id="lastname" placeholder="Enter Lastname" formControlName="ltn" [ngClass]="{'is-invalid' : r.ltn.errors && submitted}">
+                                <div *ngIf="r.ltn.errors && submitted" class="invalid-feedback">
+                                    <div *ngIf="r.ltn.errors.required">Lastname s required</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-md-6 mb-4">
+                            <div class="form-outline">
+                                <label for="pwd">Password : </label>
+                                <input type="password" class="form-control" id="pwd" placeholder="Enter password" formControlName="pwd" [ngClass]="{'is-invalid' : r.pwd.errors && submitted}">
+                                <div *ngIf="r.pwd.errors && submitted"  class="invalid-feedback">
+                                    <div *ngIf="r.pwd.errors.required">password s required</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <div class="form-outline">
+                                <label for="ConfirmPassword">ConfirmPassword : </label>
+                                <input type="ConfirmPassword" class="form-control" id="pwd" placeholder="Enter ConfirmPassword" formControlName="cnfpwd" [ngClass]="{'is-invalid' : r.cnfpwd.errors && submitted}">
+                                <div *ngIf="r.cnfpwd.errors && submitted"  class="invalid-feedback">
+                                    <div *ngIf="r.cnfpwd.errors.required">ConfirmPassword s required</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-md-6 mb-4">
+                            <div class="form-outline">
+                                <label for="dob">Data of Birth : </label>
+                                <input type="date" class="form-control" id="dob" placeholder="Enter DOB" formControlName="dob" [ngClass]="{'is-invalid' : r.dob.errors && submitted}">
+                                <div *ngIf="r.dob.errors && submitted"  class="invalid-feedback">
+                                    <div *ngIf="r.dob.errors.required">dob s required</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <div class="form-outline">
+                                <label for="Mobile Number">MobileNumebr : </label>
+                                <input type="Phone" class="form-control" id="number" placeholder="Enter MobileNumebr" formControlName="number" pattern="[0-9]{10}" [ngClass]="{'is-invalid' : r.number.errors && submitted}" maxlength="10">
+                                <div *ngIf="r.number.errors && submitted"  class="invalid-feedback">
+                                    <div *ngIf="r.number.errors.required" >MobileNumebr s required</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-md-6 mb-4">
+                            <div class="form-outline">
+                                <label for="email">Email ID : </label>
+                                <input type="email" class="form-control" id="email" placeholder="Enter Email" formControlName="email" [ngClass]="{'is-invalid' : r.email.errors && submitted}">
+                                <div *ngIf="r.email.errors && submitted" class="invalid-feedback">
+                                    <div *ngIf="r.email.errors.required">Email s required</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <div class="form-outline">
+                                <label for="Pin">Pincode : </label>
+                                <input type="Pin" class="form-control" id="pin" placeholder="Enter Pin" formControlName="pin" pattern="[0-9]{6}" [ngClass]="{'is-invalid' : r.pin.errors && submitted}" maxlength="6">
+                                <div *ngIf="r.pin.errors && submitted"  class="invalid-feedback">
+                                    <div *ngIf="r.pin.errors.required" >pin s required</div>
+                                </div>
+                            </div>
+                        </div>
+                  </div>
+                    <div class="mb-4">
+                        <label for="Address">Address : </label>
+                        <textarea type="text" class="form-control" id="address" placeholder="Enter Address" formControlName="address" [ngClass]="{'is-invalid' : r.address.errors && submitted}"></textarea>
+                        <div *ngIf="r.address.errors && submitted"  class="invalid-feedback">
+                            <div *ngIf="r.address.errors.required" >Address s required</div>
+                        </div>
+                    </div>
+                    <div class="mb-4">
+                        <button (click)="onSubmit()" class="bg-primary text-white mx-0">Register</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>   
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    
+                    
