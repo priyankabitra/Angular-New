@@ -1,0 +1,29 @@
+<p>&nbsp;&nbsp;parent1</p>
+<p>&nbsp;&nbsp;From Child Data: {{p}}</p>
+<p>&nbsp;&nbsp;From Child Data: {{p.Id}}</p>
+<p>&nbsp;&nbsp;From Child Data: {{p.name}}</p>
+<p>&nbsp;&nbsp;From Child Data: {{p.Mob}}</p>
+<p>&nbsp;&nbsp;From Child Data: {{p.Mob}}</p>
+<app-child1 parent1="Am Priya" [objData]="obj" (info)="receiveData($event)"></app-child1>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <td>Id</td>
+                        <td>Name</td>
+                        <td>Mobile Number</td>
+                        <td>D.O.B</td>
+                    </tr>
+                    <tr>
+                        <td>{{p.Id}}</td>
+                        <td>{{p.name}}</td>
+                        <td>{{p.Mob}}</td>
+                        <td>{{p.dob}}</td>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+    </div>
+</div>

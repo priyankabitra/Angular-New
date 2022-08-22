@@ -1,12 +1,5 @@
 Welcome, {{title}}
-
-
-
-<div>
-  <a routerLink="/studentresults/">Studentresults</a>&nbsp;&nbsp;&nbsp;
-  <a routerLink="/table1">table1cv</a>&nbsp;&nbsp;&nbsp;
-  <a routerLink="/login">login</a>&nbsp;&nbsp;&nbsp;
-  <a routerLink="/registration">Regitration</a>
-</div>
-
+<app-header [menu]="menus"></app-header>
 <router-outlet></router-outlet>
+<app-footer></app-footer>
+

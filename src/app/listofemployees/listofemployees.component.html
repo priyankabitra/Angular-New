@@ -1,0 +1,25 @@
+
+
+<div class="container mt-3">
+   <h3 class="text-center">List Of Employees</h3>
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <td>FirstName</td>
+                <td>LastName</td>
+                <td>D.O.B</td>
+                <td>MobileNumebr</td>
+                <td>pincode</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let emp of listofemplies">
+                <td>{{emp.ftn}}</td>
+                <td>{{emp.ltn}}</td>
+                <td>{{emp.dob}}</td>
+                <td>{{emp.number}}</td>
+                <td>{{emp.pin}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

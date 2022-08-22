@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { FormBuilder,FormGroup, Validators } from '@angular/forms';
-import { group } from '@angular/animations';
+import { RegistrationService } from '../registration.service';
 
 
 @Component({
@@ -12,11 +12,13 @@ import { group } from '@angular/animations';
 export class RegistrationComponent implements OnInit {
   RegisterForm:any= FormGroup;
   submitted:boolean=false;
+  RegistrationService: any;
   
   
   constructor(
     private rf: FormBuilder,
-    private router:Router
+    private router:Router,
+    private registrationService: RegistrationService,
   ) { }
 
   ngOnInit(): void {
@@ -41,6 +43,24 @@ export class RegistrationComponent implements OnInit {
   onSubmit(){
     console.log(this.RegisterForm)
       this.submitted=true;
+      if(this.RegisterForm.invalid){
+        return;
+      }
+
+      let registerObj={
+      ftn: this.RegisterForm.value.ftn,
+      ltn: this.RegisterForm.value.ltn,
+      dob: this.RegisterForm.value.dob,
+      number: this.RegisterForm.value.number,
+      address: this.RegisterForm.value.address,
+      pin: this.RegisterForm.value.pin,
+      email: this.RegisterForm.value.email,
+      }
+      this.registrationService.listofemployees.push(registerObj);
+      console.log(registerObj);
+      this.router.navigate(['/','listofemployees']);
+    return
     }
 
+  
 }
