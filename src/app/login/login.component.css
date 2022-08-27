@@ -1,0 +1,13 @@
+button{
+    background-color: #efa74ef5;
+    border: none;
+    padding: 7px 17px;
+    text-align: center;
+    border-radius: 10px;
+    margin-left: -6px;
+    font-size:18px;
+}
+.name{
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    border: none;
+}
