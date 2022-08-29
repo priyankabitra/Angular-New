@@ -37,7 +37,7 @@
                         <div class="col-md-6 mb-4">
                             <div class="form-outline">
                                 <label for="ConfirmPassword">ConfirmPassword : </label>
-                                <input type="ConfirmPassword" class="form-control" id="pwd" placeholder="Enter ConfirmPassword" formControlName="cnfpwd" [ngClass]="{'is-invalid' : r.cnfpwd.errors && submitted}">
+                                <input type="Password" class="form-control" id="pwd" placeholder="Enter ConfirmPassword" formControlName="cnfpwd" [ngClass]="{'is-invalid' : r.cnfpwd.errors && submitted}">
                                 <div *ngIf="r.cnfpwd.errors && submitted"  class="invalid-feedback">
                                     <div *ngIf="r.cnfpwd.errors.required">ConfirmPassword s required</div>
                                 </div>
