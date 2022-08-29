@@ -1,0 +1,31 @@
+<div class="row me-5 pe-5 d-flex justify-content-end">
+    <div class="col-sm-3 p-1">
+        <div class="form-floating">
+          <select class="form-select" name="country" id="floatingSelectGrid" (change)="sortByCountry($event)">
+            <option selected></option>
+            <option value="in">India</option>
+            <option value="us">Unitad States</option>
+            <option value="ca">Canada</option>
+            <option value="eg">England</option>
+          </select>
+          <label for="floatingSelectGrid">Selects country</label>
+        </div>
+    </div>
+</div>
+<div class="container-fluid">
+    <div class="row g-4 my-5">
+        <div class="col-sm-4" *ngFor="let news of newsdata.articles">
+            <div class="card h-100">
+                <img src="{{news.urlToImage}}" class="card-img-top" alt="">
+                <div class="card-body">
+                  <h5 class="card-title"><a href="{{news.url}}" target="_blank" class="text-decoration-none text-dark">{{news.title}}</a></h5>
+                  <p class="card-text">{{news.content}}</p>
+                  <a href="{{news.url}}" target="_blank" class="btn btn-primary">Read More</a>
+                </div>
+                <div class="card-footer">
+                    {{news.publishedAt}}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

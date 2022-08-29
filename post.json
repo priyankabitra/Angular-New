@@ -1,0 +1,16 @@
+{
+  "users": [
+    {
+      "ftn": "ddddddddd",
+      "ltn": "ddddddddd",
+      "pwd": "dddddddddd",
+      "cnfpwd": "ddddddddd",
+      "dob": "2022-08-03",
+      "number": "9999999999",
+      "address": "999999999999",
+      "pin": "999999",
+      "email": "99999999",
+      "id": 1
+    }
+  ]
+}
