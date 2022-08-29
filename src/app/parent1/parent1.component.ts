@@ -13,7 +13,7 @@ export class Parent1Component implements OnInit {
   ngOnInit(): void {
   }
 
-  obj:any=[{name:"priya",mob:"9542355841"}];
+  obj:any=[{name:"priya",mob:"9542355841",dob:"12-5-1998"}];
 
   receiveData(e:any){
     console.log(e)

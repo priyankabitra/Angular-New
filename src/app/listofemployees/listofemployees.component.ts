@@ -19,5 +19,6 @@ export class ListofemployeesComponent implements OnInit {
     this.listofemplies=this.registrationService.listofemployees;
 
   }
+  
 
 }

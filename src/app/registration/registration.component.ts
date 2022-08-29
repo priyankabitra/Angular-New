@@ -22,6 +22,7 @@ export class RegistrationComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+    const newLocal = 'cnfpwd';
     this.RegisterForm = this.rf.group({
       ftn: ['', Validators.required],
       ltn: ['', Validators.required],
@@ -31,9 +32,11 @@ export class RegistrationComponent implements OnInit {
       number: ['', Validators.required],
       address: ['', Validators.required],
       pin: ['', Validators.required],
-      email: ['', Validators.required]
+      email: ['', [Validators.required,Validators.email]],
+    }, {
+        Validator: ConfirmPasswordValidator('pwd')
 
-    })
+     });
    
   }
 
@@ -57,10 +60,18 @@ export class RegistrationComponent implements OnInit {
       email: this.RegisterForm.value.email,
       }
       this.registrationService.listofemployees.push(registerObj);
-      console.log(registerObj);
+      console.log('Service:::',this.RegisterForm.value)
+      this.registrationService.savePostData(this.RegisterForm.value).subscribe(p=>{
+        console.log('Data Added::::',p);
+      })
+      //console.log(registerObj);
       this.router.navigate(['/','listofemployees']);
     return
     }
 
   
 }
+function ConfirmPasswordValidator(arg0: string): any {
+  throw new Error('Function not implemented.');
+}
+

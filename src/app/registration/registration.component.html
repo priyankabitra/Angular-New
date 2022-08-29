@@ -8,7 +8,7 @@
                         <div class="col-md-6 mb-4">
                             <div class="form-outline">
                                 <label for="Firstname">Firstname : </label>
-                                <input type="text" class="form-control" id="firstname" placeholder="Enter Firstname" formControlName="ftn" [ngClass]="{'is-invalid' : r.ftn.errors && submitted}">
+                                <input type="text" class="form-control" id="firstname" placeholder="Enter Firstname" formControlName="ftn" [ngClass]="{'is-invalid' : r.ftn.errors && submitted}" pattern="[a-zA-Z'-'\s]*">
                                 <div *ngIf="r.ftn.errors && submitted" class="invalid-feedback">
                                     <div *ngIf="r.ftn.errors.required">Firstname s required</div>
                                 </div>
@@ -17,7 +17,7 @@
                         <div class="col-md-6 mb-4">
                             <div class="form-outline">
                                 <label for="Lastname">Lastname : </label>
-                                <input type="text" class="form-control" id="lastname" placeholder="Enter Lastname" formControlName="ltn" [ngClass]="{'is-invalid' : r.ltn.errors && submitted}">
+                                <input type="text" class="form-control" id="lastname" placeholder="Enter Lastname" formControlName="ltn" [ngClass]="{'is-invalid' : r.ltn.errors && submitted}" pattern="[a-zA-Z'-'\s]*">
                                 <div *ngIf="r.ltn.errors && submitted" class="invalid-feedback">
                                     <div *ngIf="r.ltn.errors.required">Lastname s required</div>
                                 </div>

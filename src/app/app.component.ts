@@ -17,7 +17,8 @@ export class AppComponent {
     {link:"/login",name:"login"},
     {link:"/registration",name:"Registration"},
     {link:"/listofemployees",name:"Listofemployees"},
-    {link:"/parent1",name:"Parent1"}
+    {link:"/parent1",name:"Parent1"},
+    {link:"/news",name:"News"}
     ]
   }
 }
