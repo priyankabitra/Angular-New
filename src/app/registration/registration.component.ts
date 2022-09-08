@@ -33,10 +33,8 @@ export class RegistrationComponent implements OnInit {
       address: ['', Validators.required],
       pin: ['', Validators.required],
       email: ['', [Validators.required,Validators.email]],
-    }, {
-        Validator: ConfirmPasswordValidator('pwd')
-
-     });
+    
+    });
    
   }
 
@@ -65,7 +63,7 @@ export class RegistrationComponent implements OnInit {
         console.log('Data Added::::',p);
       })
       //console.log(registerObj);
-      this.router.navigate(['/','listofemployees']);
+      this.router.navigate(['/','login']);
     return
     }
 
@@ -74,4 +72,3 @@ export class RegistrationComponent implements OnInit {
 function ConfirmPasswordValidator(arg0: string): any {
   throw new Error('Function not implemented.');
 }
-

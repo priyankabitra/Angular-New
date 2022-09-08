@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { FormBuilder,FormGroup, Validators } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
+import { RegistrationService } from '../registration.service';
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -15,7 +17,8 @@ export class LoginComponent implements OnInit {
   constructor(
     private fb: FormBuilder,
     private router:Router,
-    private http:HttpClient
+    private http:HttpClient,
+    private registrationService: RegistrationService
   ) { }
 
   ngOnInit(): void {
@@ -41,19 +44,12 @@ export class LoginComponent implements OnInit {
         let date:any=[];
         date = d;
         date.forEach((ele:any) =>{
-          console.log(ele.uname);
-          if(ele.uname===this.LoginForm.value.usr && ele.pass===this.LoginForm.value.pwd){
-            if(ele.role==1){
-              this.router.navigate(["dashboard"]);
-            }else if(ele.role==2){
-              this.router.navigate(["studentresults"]);
-            }else if(ele.role==3){
-            this.router.navigate(["table1"]);
-            }else if(ele.role==4){
-              this.router.navigate(["parent1"])
-            }else{
-              this.router.navigate(["listofemployees"]);
-            }
+          console.log(ele);
+          if(ele.email===this.LoginForm.value.usr && ele.pwd===this.LoginForm.value.pwd){
+            this.registrationService.setData(ele.ftn)
+            this.registrationService.loggedIn=true;
+           this.router.navigate(['/','dashboard']);
+           
           }else{
             this.invalidMsg=true;
           }
@@ -61,7 +57,7 @@ export class LoginComponent implements OnInit {
       })
   }
     getValidate(){
-      return this.http.get('./assets/Json/creds.json')
+      return this.http.get('http://localhost:3000/users')
     }
-  
+    
 }
