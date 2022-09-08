@@ -11,6 +11,138 @@
       "pin": "999999",
       "email": "99999999",
       "id": 1
+    },
+    {
+      "ftn": "sowjanya",
+      "ltn": "Bitra",
+      "pwd": "14723",
+      "cnfpwd": "14723",
+      "dob": "2022-09-15",
+      "number": "9542355841",
+      "address": "12-41-885",
+      "pin": "500061",
+      "email": "sowji124@gmail.com",
+      "id": 2
+    },
+    {
+      "ftn": "Lekha",
+      "ltn": "E",
+      "pwd": "1234",
+      "cnfpwd": "1234",
+      "dob": "2022-09-22",
+      "number": "9524681384",
+      "address": "12-55-624",
+      "pin": "500062",
+      "email": "lekha1@gmail.com",
+      "id": 3
+    },
+    {
+      "ftn": "Mounika",
+      "ltn": "M",
+      "pwd": "74123",
+      "cnfpwd": "74123",
+      "dob": "2022-09-08",
+      "number": "8826541387",
+      "address": "119-528-1",
+      "pin": "662222",
+      "email": "mouni@gmail.com",
+      "id": 4
+    },
+    {
+      "ftn": "Raji",
+      "ltn": "L",
+      "pwd": "5236",
+      "cnfpwd": "5236",
+      "dob": "2022-09-16",
+      "number": "6615823495",
+      "address": "129-54-33",
+      "pin": "600052",
+      "email": "raji@3gmail.com",
+      "id": 5
+    },
+    {
+      "ftn": "vinitha",
+      "ltn": "B",
+      "pwd": "632145",
+      "cnfpwd": "632145",
+      "dob": "2022-08-31",
+      "number": "9952867247",
+      "address": "212-52-41",
+      "pin": "600006",
+      "email": "vini23@gmail.com",
+      "id": 6
+    },
+    {
+      "ftn": "Manasa",
+      "ltn": "G",
+      "pwd": "15963",
+      "cnfpwd": "15963",
+      "dob": "2022-09-01",
+      "number": "9958426873",
+      "address": "55-2-41",
+      "pin": "500032",
+      "email": "manasa@gmail.com",
+      "id": 7
+    },
+    {
+      "ftn": "Mamatha",
+      "ltn": "Ch",
+      "pwd": "1234",
+      "cnfpwd": "1234",
+      "dob": "2022-08-31",
+      "number": "8520189675",
+      "address": "885-2-44",
+      "pin": "500042",
+      "email": "mamatha@gmail.com",
+      "id": 8
+    },
+    {
+      "ftn": "Ravali",
+      "ltn": "A",
+      "pwd": "14789",
+      "cnfpwd": "14789",
+      "dob": "2022-08-31",
+      "number": "8972654228",
+      "address": "12-555-36",
+      "pin": "500091",
+      "email": "ravali123@gmail.com",
+      "id": 9
+    },
+    {
+      "id": 10
+    },
+    {
+      "id": 11
+    },
+    {
+      "id": 12
+    },
+    {
+      "id": 13
+    },
+    {
+      "id": 14
+    },
+    {
+      "id": 15
+    },
+    {
+      "id": 16
+    },
+    {
+      "id": 17
+    },
+    {
+      "id": 18
+    },
+    {
+      "id": 19
+    },
+    {
+      "id": 20
+    },
+    {
+      "id": 21
     }
   ]
 }

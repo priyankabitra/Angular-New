@@ -16,6 +16,7 @@ import { Parent1Component } from './parent1/parent1.component';
 import { Child1Component } from './child1/child1.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { NewsComponent } from './news/news.component';
+import { EditlistofemployeesComponent } from './editlistofemployees/editlistofemployees.component';
 
 
 @NgModule({
@@ -31,7 +32,8 @@ import { NewsComponent } from './news/news.component';
     Parent1Component,
     Child1Component,
     DashboardComponent,
-    NewsComponent
+    NewsComponent,
+    EditlistofemployeesComponent
   ],
   imports: [
     BrowserModule,
